@@ -1,8 +1,8 @@
 {
-  "name": "ignite-bowser",
-  "description": "Infinite Red's hot boilerplate for React Native.",
+  "name": "custom-ignite-bowser",
+  "description": "Custom boilerplate for React Native.",
   "license": "MIT",
-  "repository": "infinitered/ignite-bowser",
+  "repository": "ginta12006/custom-ignite-bowser",
   "homepage": "https://github.com/infinitered/ignite-bowser",
   "version": "5.4.1",
   "files": [

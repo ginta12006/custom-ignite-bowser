@@ -51,8 +51,21 @@
     "react-native-screens": "^2.12.0",
     "react-native-safe-area-context": "3.1.8",
     "@react-navigation/native": "^5.8.4",
+    "@react-native-community/datetimepicker": "^3.0.6",
+    "formik": "^2.2.5",
+    "lodash": "^4.17.20",
+    "react-native-appearance": "^0.3.4",
+    "react-native-reanimated": "^1.13.2",
+    "react-native-snap-carousel": "^3.9.1",
+    "react-native-svg": "^12.1.0",
   <% if(props.useExpo){ %>
-    "@react-navigation/stack": "^5.2.10",
+    "@react-navigation/bottom-tabs": "^5.5.1",
+    "@react-navigation/drawer": "^5.8.1",
+    "@react-navigation/material-top-tabs": "^5.2.9",
+    "@react-navigation/stack": "^5.4.1",
+    "expo-font": "~8.3.0",
+    "expo-updates": "~0.3.3",
+    "react-native-expo-image-cache": "^4.1.0",
   <% } else { -%>
     "@react-native-community/async-storage": "^1.12.1",
     "@react-native-community/masked-view": "0.1.10",
@@ -61,7 +74,8 @@
     "react-native-localize": "^1.4.3",
     "react-native-keychain": "6.2.0",
   <% } -%>
-    "validate.js": "0.13.1"
+    "validate.js": "0.13.1",
+    "yup": "^0.30.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.0.0",
@@ -71,6 +85,7 @@
     "@storybook/react-native-server": "5.3.19",
     "@types/i18n-js": "^3.0.3",
     "@types/jest": "^25.2.3",
+    "@types/lodash": "^4.14.165",
     "@types/ramda": "0.26.44",
     "@types/react": "16.9.23",
   <% if (props.useExpo) { -%>
@@ -79,6 +94,7 @@
     "@types/react-native": "^0.63.2",
   <% } -%>
     "@types/react-test-renderer": "^16.9.2",
+    "@types/yup": "^0.29.9",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
 <% if (props.includeDetox) { -%>
@@ -236,7 +252,9 @@
       "@typescript-eslint/no-explicit-any": 0,
       "@typescript-eslint/no-object-literal-type-assertion": 0,
       "@typescript-eslint/no-empty-interface": 0,
-      "@typescript-eslint/no-var-requires": 0
+      "@typescript-eslint/no-var-requires": 0,
+      "react-native/no-inline-styles": 0,
+      "react-native/no-color-literals": 0
     }
   }
 }

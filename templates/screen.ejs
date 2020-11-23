@@ -6,11 +6,6 @@ import { Screen, Text } from "../../components"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 
-const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
-  flex: 1,
-}
-
 export const <%= props.pascalName %> = observer(function <%= props.pascalName %>() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
@@ -20,7 +15,7 @@ export const <%= props.pascalName %> = observer(function <%= props.pascalName %>
   // Pull in navigation via hook
   // const navigation = useNavigation()
   return (
-    <Screen style={ROOT} preset="scroll">
+    <Screen style={{ backgroundColor: color.palette.black, flex: 1 }} preset="fixed">
       <Text preset="header" text="<%= props.camelName %>" />
     </Screen>
   )

@@ -51,10 +51,10 @@ export const install = async (toolbox: IgniteToolbox) => {
     print.info(
       gray(
         "  " +
-          info
-            .split("\n")
-            .map(s => s.trim())
-            .join("\n  "),
+        info
+          .split("\n")
+          .map(s => s.trim())
+          .join("\n  "),
       ),
     )
 
@@ -193,6 +193,7 @@ export const install = async (toolbox: IgniteToolbox) => {
     { template: "README.md.ejs", target: "README.md" },
     { template: ".gitignore.ejs", target: ".gitignore" },
     { template: ".env.example", target: ".env" },
+    { template: ".exprc.example", target: ".exprc" },
     { template: ".prettierignore", target: ".prettierignore" },
     { template: ".solidarity", target: ".solidarity" },
     { template: "babel.config.js", target: "babel.config.js" },
@@ -213,10 +214,6 @@ export const install = async (toolbox: IgniteToolbox) => {
     {
       template: "app/screens/welcome-screen/welcome-screen.tsx.ejs",
       target: "app/screens/welcome-screen/welcome-screen.tsx",
-    },
-    {
-      template: "app/screens/demo-screen/demo-screen.tsx.ejs",
-      target: "app/screens/demo-screen/demo-screen.tsx",
     },
     {
       template: "app/navigation/root-navigator.tsx.ejs",
@@ -441,8 +438,8 @@ export const install = async (toolbox: IgniteToolbox) => {
   const androidInfo = isAndroidInstalled(toolbox)
     ? ""
     : `\n\nTo run in Android, make sure you've followed the latest react-native setup instructions at https://facebook.github.io/react-native/docs/getting-started.html before using ignite.\nYou won't be able to run ${bold(
-        "react-native run-android",
-      )} successfully until you have.`
+      "react-native run-android",
+    )} successfully until you have.`
 
   const runInfo = useExpo
     ? "yarn start"
@@ -463,8 +460,8 @@ export const install = async (toolbox: IgniteToolbox) => {
     ${bold("Now get cooking! 🍽")}
 
     ${gray(
-      "(Running yarn install one last time to make sure everything is installed -- please be patient!)",
-    )}
+    "(Running yarn install one last time to make sure everything is installed -- please be patient!)",
+  )}
   `
 
   print.info(successMessage)
